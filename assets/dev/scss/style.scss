@@ -1,0 +1,13 @@
+/* ===============сброс==============*/
+@import "_reset";
+@import "_tools";
+/* ==============базовые стили================*/
+@import "_base";
+/*стили woocommerce*/
+@import "_woo";
+/* =========стили отдельных страниц и блоков=========*/
+@import "_header";
+@import "_index";
+@import "_wp-blocks";
+
+@import "_footer";

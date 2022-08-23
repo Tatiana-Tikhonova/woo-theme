@@ -1,0 +1,26 @@
+.site-footer {
+    background: #000;
+    padding: 30px 0;
+}
+
+.widget-area {}
+
+.container {}
+
+.site-footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.site-footer__item {
+    flex: 1 1 25%;
+
+    @media (max-width:$md4) {
+        flex: 1 1 50%;
+    }
+
+    @media (max-width:$md6) {
+        flex: 1 1 100%;
+    }
+}

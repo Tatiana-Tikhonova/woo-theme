@@ -1,0 +1,26 @@
+// цитата
+.wp-block-quote {
+    // color: red;
+}
+
+// галерея
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image) {
+    flex-grow: 0;
+
+    @media (max-width:$md4) {
+        width: calc(50% - var(--wp--style--unstable-gallery-gap, 16px)/2);
+    }
+}
+
+// блок медиа + текст
+.wp-block-media-text.is-stacked-on-mobile {
+    @media (max-width:$md4) {
+        grid-template-columns: 100% !important;
+    }
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+    @media (max-width:$md4) {
+        padding: 0;
+    }
+}
