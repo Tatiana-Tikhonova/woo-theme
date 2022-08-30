@@ -16,7 +16,7 @@
 @import "_fonts";
 // ============переменные===============
 // экран, контейнер и брейкпойнты
-$minwidth: 320px;
+// $minwidth: 320px;
 $maxScreenWidth: 1920px;
 $maxContainerWidth: 1320px;
 $md1: $maxContainerWidth;
@@ -28,7 +28,7 @@ $md6: 480px;
 // боковые поля
 $fields: 12px;
 // половина межколоночника
-$gap: math.div(24px, 2);
+$gap: 1rem;
 // корневой размер шрифта для тега html и функции rem()
 $rem: 14;
 
@@ -79,6 +79,10 @@ $rem: 14;
     --clr-dark-lighten: lighten(#364446, 30%);
     --clr-light: #ffffff;
     --light-blue-grey: #d7e0e2;
+    --clr-woo-green: #0f834d;
+    --clr-woo-blue: #3d9cd2;
+    --clr-woo-orange: #e2401c;
+    --clr-woo-red: #f00;
     --shadow-block: 0px 0px 10px rgba(54, 68, 70, 0.2);
     --shadow-primary: 0px 0px 10px rgba(80, 153, 0, 0.7);
     --shadow-accent: 0px 0px 10px rgba(248, 78, 29, 0.7);

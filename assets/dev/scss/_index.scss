@@ -2,7 +2,7 @@
 
 .content-container {
     display: flex;
-    gap: 24px;
+    gap: 1rem;
 
     @media (max-width:$md3) {
         flex-wrap: wrap;
@@ -10,7 +10,7 @@
 }
 
 .site-main {
-    flex: 1 1 75%;
+    flex: 1 1 70%;
 
     @media (max-width:$md3) {
         flex: 1 1 100%;
@@ -24,7 +24,7 @@
         flex: 1 1 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 1rem;
     }
 }
 

@@ -11,7 +11,7 @@
 get_header();
 ?>
 <div class="container content-container">
-	<main id="primary" class="site-main">
+	<main id="primary-single" class="site-main">
 
 		<?php
 		while (have_posts()) :

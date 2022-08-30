@@ -16,7 +16,7 @@
 get_header();
 ?>
 <div class="container content-container">
-	<main id="primary" class="site-main">
+	<main id="primary-index" class="site-main">
 
 		<?php
 		if (have_posts()) :

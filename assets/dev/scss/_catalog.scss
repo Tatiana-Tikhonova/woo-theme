@@ -1,0 +1,163 @@
+.content-area {}
+
+.content-area__container {}
+
+.content-row {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    gap: 1rem;
+}
+
+
+.woocommerce,
+.woocommerce-page {
+
+
+    /**
+    	 * Product loops
+    	 */
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .product {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    .products {
+
+        &.columns-1 {
+
+            .product {
+                width: 100%;
+            }
+        }
+
+        &.columns-2 {
+
+            .product {
+                width: calc(50% - 1rem);
+            }
+        }
+
+        &.columns-3 {
+
+            .product {
+                width: calc(33.3333% - 1rem);
+            }
+        }
+
+        &.columns-4 {
+
+            .product {
+                width: calc(25% - 1rem);
+            }
+        }
+
+        &.columns-5 {
+
+            .product {
+                width: calc(20% - 1rem);
+            }
+        }
+
+        &.columns-6 {
+
+            .product {
+                width: calc(16.6666% - 1rem);
+            }
+        }
+    }
+
+    &.columns-1 {
+
+        .products {
+
+            .product {
+                width: 100%;
+            }
+        }
+    }
+
+    &.columns-2 {
+
+        .products {
+
+            .product {
+                width: calc(50% - 1rem);
+            }
+        }
+    }
+
+    &.columns-3 {
+
+        .products {
+
+            .product {
+                width: calc(33.3333% - 1rem);
+            }
+        }
+    }
+
+    &.columns-4 {
+
+        .products {
+
+            .product {
+                width: calc(25% - 1rem);
+            }
+        }
+    }
+
+    &.columns-5 {
+
+        .products {
+
+            .product {
+                width: calc(20% - 1rem);
+            }
+        }
+    }
+
+    &.columns-6 {
+
+        .products {
+
+            .product {
+                width: calc(16.6666% - 1rem);
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .products[class*='columns-'] {
+            .product {
+                width: calc(33.3333% - 1rem);
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .products[class*='columns-'] {
+            .product {
+                width: calc(50% - 1rem);
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        .products[class*='columns-'] {
+            justify-content: center;
+
+            .product {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    }
+
+}
