@@ -13,6 +13,6 @@ if (!is_active_sidebar('sidebar-1')) {
 }
 ?>
 
-<aside id="secondary" class="widget-area sidebar">
-	<?php dynamic_sidebar('sidebar-1'); ?>
-</aside><!-- #secondary -->
+<div id="secondary" class="widget-area footer__sidebar">
+	<?php dynamic_sidebar('sidebar-2'); ?>
+</div><!-- #secondary -->

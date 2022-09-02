@@ -197,11 +197,11 @@
 // }
 
 // .stock.in-stock {
-//     color: #0f834d;
+//     color: var(--clr-woo-green);
 // }
 
 // .stock.out-of-stock {
-//     color: #e2401c;
+//     color: var(--clr-woo-orange);
 // }
 
 /**
@@ -251,100 +251,7 @@
 //     padding: 0;
 // }
 
-/**
- * Star rating
- */
-.star-rating {
-    overflow: hidden;
-    position: relative;
-    height: 1.618em;
-    line-height: 1.618;
-    width: 5.3em;
-    font-family: star;
-    font-weight: 400;
-}
 
-.star-rating::before {
-    content: "\53\53\53\53\53";
-    opacity: 0.25;
-    float: left;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-
-.star-rating span {
-    overflow: hidden;
-    float: left;
-    top: 0;
-    left: 0;
-    position: absolute;
-    padding-top: 1.5em;
-}
-
-.star-rating span::before {
-    content: "\53\53\53\53\53";
-    top: 0;
-    position: absolute;
-    left: 0;
-    color: #4169e1;
-}
-
-p.stars a {
-    position: relative;
-    height: 1em;
-    width: 1em;
-    text-indent: -999em;
-    display: inline-block;
-    text-decoration: none;
-    margin-right: 1px;
-    font-weight: 400;
-}
-
-p.stars a::before {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    line-height: 1;
-    font-family: star;
-    content: "\53";
-    color: #404040;
-    text-indent: 0;
-    opacity: 0.25;
-}
-
-p.stars a:hover~a::before {
-    content: "\53";
-    color: #404040;
-    opacity: 0.25;
-}
-
-p.stars:hover a::before {
-    content: "\53";
-    color: #4169e1;
-    opacity: 1;
-}
-
-p.stars.selected a.active::before {
-    content: "\53";
-    color: #4169e1;
-    opacity: 1;
-}
-
-p.stars.selected a.active~a::before {
-    content: "\53";
-    color: #404040;
-    opacity: 0.25;
-}
-
-p.stars.selected a:not(.active)::before {
-    content: "\53";
-    color: #4169e1;
-    opacity: 1;
-}
 
 /**
  * Tabs
@@ -371,76 +278,15 @@ p.stars.selected a:not(.active)::before {
 //     margin-bottom: 1em;
 // }
 
-/**
- * Password strength meter
- */
-.woocommerce-password-strength {
-    text-align: right;
-}
 
-.woocommerce-password-strength.strong {
-    color: #0f834d;
-}
 
-.woocommerce-password-strength.short {
-    color: #e2401c;
-}
 
-.woocommerce-password-strength.bad {
-    color: #e2401c;
-}
 
-.woocommerce-password-strength.good {
-    color: #3d9cd2;
-}
 
-/**
- * Forms
- */
-.form-row.woocommerce-validated input.input-text {
-    box-shadow: inset 2px 0 0 #0f834d;
-}
 
-.form-row.woocommerce-invalid input.input-text {
-    box-shadow: inset 2px 0 0 #e2401c;
-}
 
-.required {
-    color: #f00;
-}
 
-/**
- * Notices
- */
-.woocommerce-message,
-.woocommerce-info,
-.woocommerce-error,
-.woocommerce-noreviews,
-p.no-comments {
-    background-color: #0f834d;
-    clear: both;
-}
 
-.woocommerce-info,
-.woocommerce-noreviews,
-p.no-comments {
-    background-color: #3d9cd2;
-}
-
-.woocommerce-error {
-    background-color: #e2401c;
-}
-
-.demo_store {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: 0;
-    padding: 1em;
-    background-color: #3d9cd2;
-    z-index: 9999;
-}
 
 // @media screen and (min-width: 768px) {
 

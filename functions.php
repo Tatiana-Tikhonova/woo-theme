@@ -60,3 +60,15 @@ if (defined('JETPACK__VERSION')) {
 if (class_exists('WooCommerce')) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+/**
+ * Подключаем файл с хуками
+ */
+if (class_exists('WooCommerce')) {
+	require get_template_directory() . '/inc/actions.php';
+}
+/**
+ * Подключаем файл с фильтрами
+ */
+if (class_exists('WooCommerce')) {
+	require get_template_directory() . '/inc/filters.php';
+}

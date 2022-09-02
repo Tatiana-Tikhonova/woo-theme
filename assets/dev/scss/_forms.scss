@@ -1,0 +1,126 @@
+/**
+ * Forms
+ */
+.form-row.woocommerce-validated input.input-text {
+    box-shadow: inset 2px 0 0 var(--clr-woo-green);
+}
+
+.form-row.woocommerce-invalid input.input-text {
+    box-shadow: inset 2px 0 0 var(--clr-woo-orange);
+}
+
+.required {
+    color: var(--clr-woo-red);
+}
+
+/*woocommerce search*/
+.search-form,
+.woocommerce-product-search {
+    display: flex;
+}
+
+/*Cart page*/
+.woocommerce-cart-form {}
+
+ul.woocommerce-shipping-methods,
+ul.wc_payment_methods,
+ul.payment_methods,
+ul.methods,
+.woocommerce-MyAccount-navigation ul {
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            color: inherit;
+        }
+    }
+}
+
+/*checkout*/
+.woocommerce-checkout {}
+
+.woocommerce-form,
+.checkout_coupon,
+.woocommerce-form-coupon,
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-shipping-fields__field-wrapper,
+.woocommerce-additional-fields__field-wrapper,
+.woocommerce-address-fields__field-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+p.form-row {
+    flex: 1 1 calc(50% - 1rem);
+    margin-top: 0;
+
+    input {
+        display: block;
+        width: 100%;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+    }
+
+    .button {
+        height: 100%;
+    }
+
+    @media (max-width:575px) {
+        flex: 1 1 100%;
+    }
+}
+
+p.form-row-wide {
+    flex: 1 1 100%;
+}
+
+.woocommerce-input-wrapper {
+    display: block;
+
+
+}
+
+.checkout_coupon {
+    p:first-child {
+        width: 100%;
+    }
+}
+
+.woocommerce-form-coupon-toggle {}
+
+/*My account*/
+.woocommerce-account .woocommerce {
+    display: flex;
+}
+
+.woocommerce-MyAccount-navigation {
+    flex: 1 1 25%;
+
+    ul {}
+
+
+}
+
+.woocommerce-MyAccount-navigation-link {
+    padding: 0.5em 1.5em;
+}
+
+.woocommerce-MyAccount-navigation-link.is-active {
+    color: red;
+}
+
+.woocommerce-MyAccount-content {
+    flex: 1 1 75%;
+}

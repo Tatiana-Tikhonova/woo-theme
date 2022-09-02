@@ -30,7 +30,7 @@ body {
 	flex-direction: column;
 }
 
-.site-main {
+.content-area {
 	flex: 1 1 auto;
 }
 
@@ -110,10 +110,11 @@ body {
 
 /*стили только у тегов внутри дефолтного контента и табов товара  */
 .entry-content,
-.woocommerce-tabs {
+.wc-tab {
 
 	p {
-		margin-bottom: 1.5em;
+		margin-block: 0;
+		margin-top: 1.5em;
 	}
 
 	ul,
@@ -164,10 +165,11 @@ body {
 		color: #191970;
 	}
 
-	*:last-child {
-		margin-bottom: 0;
+	*:first-child {
+		margin-top: 0;
 	}
 }
+
 
 h1,
 h2,
@@ -180,7 +182,7 @@ title {
 	font-weight: 700;
 	color: var(--clr-dark);
 	line-height: 120%;
-	margin-bottom: 1.2em;
+	margin-bottom: 1em;
 
 }
 
@@ -198,7 +200,9 @@ h5 {}
 
 h6 {}
 
-p {}
+p {
+	margin-bottom: 1em;
+}
 
 a:focus-visible,
 input:focus,
@@ -212,43 +216,35 @@ select:focus {
 
 
 /* Forms --------------------------------------------- */
-// input:not([type="radio"]),
-// input:not([type="checkbox"]),
-// textarea {
-// 	color: #666;
-// 	border: 1px solid #ccc;
-// 	border-radius: 3px;
-// 	padding: 3px;
+input:not([type="radio"]),
+input:not([type="checkbox"]),
+textarea,
+select {
+	border: 1px solid currentColor;
+	padding: 0.6em 1.2em;
 
-// 	&:focus {
-// 		color: #111;
-// 	}
-// }
+	&:focus {}
+}
 
-// select {
-// 	border: 1px solid #ccc;
-// }
 
+a.button {
+	text-decoration: none;
+
+}
 
 button,
 .button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	// border: 1px solid;
-	// border-color: #ccc #ccc #bbb;
-	// border-radius: 3px;
-	// background: #e6e6e6;
-	// color: rgba(0, 0, 0, 0.8);
-	// line-height: 1;
-	// padding: 0.6em 1em 0.4em;
+	border: 1px solid currentColor;
+	line-height: 1;
+	padding: 0.6em 1.2em;
 
 
 	&:hover,
 	&:focus,
-	&:active {
-		// border-color: #aaa #bbb #bbb;
-	}
+	&:active {}
 }
 
 /* Navigation
@@ -311,7 +307,7 @@ input[type="submit"] {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	// margin: 1.5em 0 0;
 }
 
 .entry-footer {
