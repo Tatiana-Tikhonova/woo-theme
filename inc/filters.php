@@ -124,3 +124,60 @@ function tati_filter_walker_nav_menu_start_el($item_output, $item, $depth, $args
     return $item_output;
 }
 add_filter('walker_nav_menu_start_el', 'tati_filter_walker_nav_menu_start_el', 10, 4);
+
+/**
+ * замена текста на кнопке товара в цикле
+ */
+add_filter('woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text');
+function custom_woocommerce_product_add_to_cart_text()
+{
+    global $product;
+    $product_type = $product->get_type();
+    switch ($product_type) {
+        case 'external':
+            return 'Перейти';
+            break;
+        case 'grouped':
+            return 'Посмотреть';
+            break;
+        case 'simple':
+            return 'В корзину';
+            break;
+        case 'variable':
+            return 'Выбрать';
+            break;
+        default:
+            return 'Подробнее';
+    }
+}
+
+add_filter('woocommerce_upsell_display_args', 'tati_woocommerce_upsell_display_args_filter');
+
+/**
+ * Function for `woocommerce_upsell_display_args` filter-hook.
+ * 
+ * @param  $array 
+ *
+ * @return 
+ */
+function tati_woocommerce_upsell_display_args_filter($array)
+{
+    $array['posts_per_page'] = $array['columns'];
+    return $array;
+}
+add_filter('woocommerce_output_related_products_args', 'tati_woocommerce_output_related_products_args_filter');
+
+/**
+ * Function for `woocommerce_output_related_products_args` filter-hook.
+ * 
+ * @param  $args 
+ *
+ * @return 
+ */
+function tati_woocommerce_output_related_products_args_filter($args)
+{
+
+    $args['posts_per_page'] = 4;
+    $args['columns'] = 4;
+    return $args;
+}

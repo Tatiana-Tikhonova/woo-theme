@@ -1,0 +1,46 @@
+.product {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.summary.entry-summary {
+    flex: 1 1 calc(70% - 1rem);
+}
+
+/*TABS*/
+.woocommerce-tabs.wc-tabs-wrapper {
+
+    @media (min-width:991px) {
+        display: flex;
+    }
+}
+
+// переключатели табов
+.wc-tabs {
+    @media (max-width:992px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+.wc-tabs__item {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid currentColor;
+}
+
+.wc-tabs__item.active {}
+
+.wc-tabs__link {}
+
+// панели табов
+.wc-tab.panel {
+    padding: 30px;
+}
+
+// список комментариев
+.commentlist {
+    list-style: none;
+}
